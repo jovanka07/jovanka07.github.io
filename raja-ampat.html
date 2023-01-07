@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geulify</title>
+    <style>
+      * {
+        margin: 0;
+        /*padding: 0;*/
+      }
+      @font-face {
+        src: url(font/Jua-Regular.ttf);
+        font-family: "jua";
+      }
+      @font-face {
+        src: url(font/OpenSansRegular.ttf);
+        font-family: "opensans";
+      }
+      /* BAGIAN HEADER */
+      header {
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        justify-content: space-around;
+        box-sizing: border-box;
+        position: fixed;
+        box-shadow: 0px 2px 5px grey;
+        /*margin: 0px 0 0 0;*/
+        padding: 10px;
+        box-sizing: border-box;
+        /*position: absolute;*/
+        /* z-index: 100; */
+        /* margin: 0 0 50px 0; */
+      }
+      .logo-header {
+        /*border: 1px solid black;*/
+        height: 90px;
+        width: 10%;
+      }
+      .logo-header img {
+        width: 100%;
+        height: 100%;
+      }
+      .nav-header {
+        margin: 30px 0 0 0;
+      }
+
+      .nav-header a {
+        font-size: 20px;
+        text-decoration: none;
+        margin: 0 0 0 15px;
+        transition: 0.8s;
+        color: #333;
+      }
+
+      .nav-header a:hover {
+        color: white;
+        padding: 5px;
+        box-sizing: border-box;
+        background-color: #333;
+        border-radius: 10px;
+      }
+
+      @media (max-width: 800px) {
+        header {
+          display: inline-block;
+        }
+        .logo-header {
+          width: 30%;
+          margin: auto;
+        }
+        .nav-header {
+          text-align: center;
+          margin: 2px 0 0 0;
+        }
+      }
+
+      .pembatas {
+        height: 150px;
+      }
+      .raja-ampat {
+        width: 80%;
+        margin: 30px auto;
+      }
+      .raja-ampat iframe {
+        width: 100%;
+      }
+      .container-raja-ampat {
+        width: 80%;
+        margin: 30px auto;
+        /* border: 1px solid black; */
+      }
+      .flex-raja-ampat {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 30px 0;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+      .flex-raja-ampat img {
+        width: 50%;
+      }
+      .flex-kalimat-ampat {
+        width: 40%;
+      }
+      .flex-kalimat-ampat h3 {
+        font-size: 25px;
+        font-family: "jua";
+        margin: 0 0 30px 0;
+      }
+      .daftar-pustaka {
+        width: 70%;
+        margin: 0 30px 0 30px;
+        border-left: 5px solid blue;
+      }
+      .flex-kalimat-ampat p {
+        font-family: "opensans";
+      }
+      .daftar-pustaka p {
+        margin: 0 0 0 20px;
+        font-family: "opensans";
+      }
+
+      @media (max-width: 800px) {
+        .flex-raja-ampat img {
+          width: 100%;
+        }
+        .flex-kalimat-ampat {
+          width: 100%;
+        }
+        .flex-kalimat-ampat h3 {
+          text-align: center;
+          margin: 30px 0 30px 0;
+        }
+      }
+
+      /* FOOTER */
+      footer {
+        width: 100%;
+        background-color: #4f46e5;
+        display: flex;
+        justify-content: space-around;
+        padding: 15px;
+        box-sizing: border-box;
+      }
+      .footer-kiri {
+        margin: 30px 0 30px 0;
+        width: 40%;
+        /*border: 1px solid black;*/
+      }
+      .footer-kiri p {
+        font-size: 16px;
+        color: #fff;
+        font-family: "opensans";
+      }
+      .footer-kiri .foo {
+        font-size: 21px;
+        color: #fff;
+        font-weight: bold;
+        font-family: "opensans";
+        margin: 0 0 15px 0;
+      }
+      .footer-kanan {
+        margin: 30px 0 30px 0;
+        /*border: 1px solid black;*/
+        width: 40%;
+        display: flex;
+        justify-content: space-around;
+      }
+      .satu-footer h5 {
+        font-size: 21px;
+        color: #fff;
+        font-weight: bold;
+        font-family: "opensans";
+      }
+      .satu-footer p {
+        font-size: 16px;
+        color: #fff;
+        margin: 15px 0 0 0;
+        font-family: "opensans";
+      }
+      @media (max-width: 800px) {
+        footer {
+          flex-wrap: wrap;
+        }
+        .footer-kiri {
+          width: 100%;
+          text-align: center;
+        }
+        .footer-kanan {
+          width: 100%;
+        }
+      }
+      /* END FOOTER */
+      /* NAIK */
+      .up {
+        width: 100%;
+        /* border: 1px solid black; */
+        bottom: 0px;
+        padding: 20px;
+        box-sizing: border-box;
+        position: absolute;
+        margin: auto;
+        position: fixed;
+        margin: 0 0 15px 0;
+      }
+      .klik-up {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #bab5ff;
+        /* box-shadow: 0.1px 0.1px 50px #d1d1d1; */
+        display: flex;
+        float: right;
+        transition: 0.7s;
+        margin: 0 35px 0 0;
+      }
+      .klik-up img {
+        margin: auto;
+      }
+      .klik-up:hover {
+        background-color: antiquewhite;
+      }
+      @media (max-width: 800px) {
+        .up {
+          padding: 10px;
+          margin: 0 0 35px 0;
+        }
+        .klik-up {
+          margin: 0 1px 0 0;
+        }
+      }
+      /* END NAIK */
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo-header">
+        <img src="img/logo.png" />
+      </div>
+
+      <div class="nav-header">
+        <a href="index.html">Halaman Utama</a>
+        <a href="about.html">Tentang</a>
+        <a href="virtual-tour.html">Virtual Tour</a>
+        <a href="harga.html">Harga</a>
+      </div>
+    </header>
+
+    <div class="pembatas"></div>
+    <div class="up">
+      <a href=""
+        ><div class="klik-up">
+          <img src="img/top.png" width="30px" alt="" />
+        </div>
+      </a>
+    </div>
+
+    <div class="raja-ampat">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!4v1630416518980!6m8!1m7!1sCAoSLEFGMVFpcE5FWGdOeUt2VXpuclBId2VYVl9aTUNQcHZEX0VRamYzZ05UdHlE!2m2!1d-2.221012!2d130.4646514!3f281.47!4f-25.47!5f0.4000000000000002"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    <div class="container-raja-ampat">
+      <div class="flex-raja-ampat">
+        <img src="img/raja-ampat.jpg" alt="" />
+        <div class="flex-kalimat-ampat">
+          <h3>RAJA AMPAT</h3>
+          <p>
+            Kepulauan Raja Ampat berada di bagian paling barat Papua dan
+            membentang di area seluas kurang lebih 4,6 juta hektar. Kabupaten
+            Raja Ampat terdiri dari 4 pulau besar yaitu Pulau Waigeo, Batanta,
+            Salawati dan Misool, dan 1.847 pulau-pulau kecil lainnya. Nah, nama
+            Raja Ampat sendiri diyakini berasal dari legenda masyarakat setempat
+            yang percaya bahwa zaman dahulu kala ada seorang wanita yang
+            menemukan tujuh telur, empat telur tersebut menetas menjadi
+            raja-raja yang berkuasa di empat pulau utama. Tersisa tiga lainnya,
+            satu menjadi batu, satu menjadi wanita, dan satu lagi menjadi
+            makhluk gaib atau hantu.Terlepas legenda yang dipercayai masyarakat
+            setempat, keindahan yang disuguhkan oleh Raja Ampat merupakan fakta
+            yang tak bisa diganggu gugat. <br /><br />
+            wilayah perairan Raja Ampat adalah salah satu destinasi diving
+            terbaik di dunia. Menurut laporan sebuah organisasi sosial
+            lingkungan internasional, The Nature Conservancy and Conservation
+            International, sekitar 75% spesies karang di dunia hidup di
+            kepulauan Raja Ampat. Destinasi ini memiliki kekayaan dan keunikan
+            spesies yang tinggi dengan ditemukannya 1.318 jenis ikan, 699 jenis
+            moluska (hewan lunak), dan 537 jenis terumbu karang. Rasakan sendiri
+            sensasi menyelam dan bertemu dengan ragam jenis biota laut yang
+            unik, seperti kuda laut kerdil (pygmy seahorse), ikan kelelawar,
+            hingga dugong bisa kamu temukan di wilayah perairan Raja Ampat.
+          </p>
+        </div>
+      </div>
+
+      <p style="font-family: 'opensans'">
+        Beberapa spot menyelam terbaik dan paling terkenal di Raja Ampat di
+        antaranya adalah Kabui Passage, di sekitar Dermaga Pulau Arborek,
+        Sauwandarek, Yenbuba, Dinding Friwen, dan banyak lagi! Tak heran ya,
+        jika banyak sekali wisatawan mancanegara yang rela jauh-jauh datang ke
+        Indonesia untuk menikmati pesona bawah lautnya yang memesona. Kamu
+        jangan mau kalah, yuk, masukkan Raja Ampat ke daftar kunjunganmu nanti,
+        Sobat Pesona! Tak hanya keindahan bawah lautnya yang luar biasa,
+        pemandangan di atas permukaan juga tak kalah memesona. Panorama deretan
+        pulau-pulau batu di tengah gradasi air biru terlihat begitu surgawi saat
+        dilihat dari atas bukit. Siapkan fisik yang kuat dan lakukan trekking ke
+        atas puncak bukitnya untuk melihat pemandangan indah seperti ini, ya!
+        <br />
+        <br />
+
+        Raja Ampat juga menawarkan keramahan masyarakat setempat yang akan
+        membuat Sobat Pesona betah. Selain menjelajahi alamnya, jangan lupa
+        untuk menyelami budaya setempat, ya! Sobat Pesona bisa mengunjungi
+        sekaligus menginap di Desa Wisata Arborek.Ada banyak sekali pilihan
+        penginapan serta atraksi wisata yang bisa Sobat Pesona nikmati selama di
+        desa wisata ini, seperti melihat pembuatan kerajinan anyaman khas
+        Arborek yang sudah terkenal hingga mancanegara, hingga mencicipi
+        berbagai macam kuliner tradisional khas Papua, seperti papeda atau
+        sinole
+        <br /><br />
+      </p>
+
+      <div class="daftar-pustaka">
+        <p style="font-family: 'opensans'">
+          <span style="color: blue; font-weight: bold">REFERENSI </span> <br />
+          <br />
+          - Indonesia, Wonderful. 2019. "<i>
+            Mengimpikan Raja Ampat? Jadikan itu kenyataan, </i
+          >"
+          <a
+            href="https://www.indonesia.travel/id/id/destinasi/maluku-papua/raja-ampat"
+            >,
+            https://www.indonesia.travel/id/id/destinasi/maluku-papua/raja-ampat</a
+          >
+          Di akses pada 03 January 2023 Pukul 09.25
+        </p>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-kiri">
+        <p class="foo">Geulify</p>
+        <p>Nikmati keseruan setiap detik nya.</p>
+      </div>
+
+      <div class="footer-kanan">
+        <div class="satu-footer">
+          <h5>Gunung</h5>
+          <p>Keindahan</p>
+          <p>Natural</p>
+        </div>
+
+        <div class="satu-footer">
+          <h5>Pantai</h5>
+          <p>Suasana</p>
+          <p>Sejuk</p>
+        </div>
+
+        <div class="satu-footer">
+          <h5>Kuliner</h5>
+          <p>Kenikmatan</p>
+          <p>Khas</p>
+        </div>
+      </div>
+    </footer>
+    <!-- FOOTER -->
+  </body>
+</html>
